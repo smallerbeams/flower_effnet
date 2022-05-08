@@ -151,12 +151,12 @@ def classifier(x, n_classes):
 # ResNet164  | 18  |
 # ResNet1001 | 111 |
 #
-n = 18
+n = 12
 depth =  n * 9 + 2
 n_blocks = ((depth - 2) // 9) - 1
 
 # The input tensor
-inputs = Input(shape=(32, 32, 3))
+inputs = Input(shape=(224, 224, 3))
 
 # The Stem Convolution Group
 x = stem(inputs)
@@ -165,7 +165,7 @@ x = stem(inputs)
 x = learner(x, n_blocks)
 
 # The Classifier for 10 classes
-outputs = classifier(x, 10)
+outputs = classifier(x, 219)
 
 # Instantiate the Model
 model = Model(inputs, outputs)
