@@ -11,7 +11,7 @@ def get_training_model():
     n_blocks = ((depth - 2) // 9) - 1
 
     # The input tensor
-    inputs = tf.keras.layers.Input(shape=(32, 32, 3))
+    inputs = tf.keras.layers.Input(shape=(224, 224, 3))
 
     # The Stem Convolution Group
     x = resnet_cifar10.stem(inputs)
@@ -20,7 +20,7 @@ def get_training_model():
     x = resnet_cifar10.learner(x, n_blocks)
 
     # The Classifier for 10 classes
-    outputs = resnet_cifar10.classifier(x, 10)
+    outputs = resnet_cifar10.classifier(x, 219)
 
     # Instantiate the Model
     model = tf.keras.Model(inputs, outputs)
