@@ -151,7 +151,7 @@ def classifier(x, n_classes):
 # ResNet164  | 18  |
 # ResNet1001 | 111 |
 #
-n = 12
+n = 18
 depth =  n * 9 + 2
 n_blocks = ((depth - 2) // 9) - 1
 
