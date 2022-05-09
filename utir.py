@@ -1,4 +1,4 @@
-import resnet_cifar10
+import resnet
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
